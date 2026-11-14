@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS của SIGN.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <img src="images.jpg" alt="Logo" class="logo">
+    <div class="container">
+        <div class="sign">
+            <h1>Đăng nhập</h1>
+        </div>
+        <form action="Menu.html"> <!-- Chuyển trang Menu.html vào đây để HTML tự kiểm tra dữ liệu trước khi đi -->
+            <div class="input">
+        <!-- Ô nhập tài khoản -->
+            <input type="text" placeholder="Tên đăng nhập/Email" required>
+            <br><br>
+
+            <div class="pass-box">
+                    <!-- Ô nhập mật khẩu -->
+                    <input type="password" id="pass" placeholder="Mật khẩu" required>
+                    
+                    <!-- Icon con mắt (Mặc định là mắt gạch chéo vì mật khẩu đang ẩn) -->
+                    <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+                </div>
+            </div> <!-- ĐÃ THÊM: Thẻ đóng còn thiếu của <div class="input"> -->
+    
+                <br>
+                <a href="QuenMatKhau.html"> <!-- Nên đổi link này thành trang quên mật khẩu riêng thay vì Menu.html -->
+                    <p>Quên mật khẩu</p>
+                </a>
+    
+            <div class="button">
+                <!-- Bỏ thẻ <a> bọc ngoài button, đổi thành type="submit" để HTML bắt lỗi required -->
+                <button type="submit">Đăng nhập</button>
+            </div>
+        </form>
+        <br>
+       <div class="button">
+            <a href="Register an account.html"> <!-- Nên đổi link này thành trang quên mật khẩu riêng thay vì Menu.html -->
+                <button>Đăng ký</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Đoạn mã JavaScript xử lý ẩn/hiện mật khẩu và đổi icon chính xác -->
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('pass');
+
+        togglePassword.addEventListener('click', function () {
+            // Đổi type của input mật khẩu giữa password và text
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Đổi icon con mắt dựa trên trạng thái hiển thị thực tế
+            if (type === 'text') {
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');      // Thấy mật khẩu -> Mắt mở
+            } else {
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash'); // Ẩn mật khẩu -> Mắt gạch chéo
+            }
+        });
+    </script>
+</body>
+</html>

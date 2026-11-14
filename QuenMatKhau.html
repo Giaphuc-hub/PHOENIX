@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS cua quen mat khau.css">
+</head>
+<body>
+    <img src="images.jpg" alt="Logo" class="logo">
+    <div class="container">
+        <div class="sign">
+            <h1>Quên mật khẩu</h1>
+        </div>
+        <form action="Menu.html"> <!-- Chuyển trang Menu.html vào đây để HTML tự kiểm tra dữ liệu trước khi đi -->
+            <div class="input">
+        <!-- Ô nhập tài khoản -->
+            <input type="text" placeholder="Email" required>
+            <br><br>
+            </div> <!-- ĐÃ THÊM: Thẻ đóng còn thiếu của <div class="input"> -->
+                <br>
+            <div class="button">
+                <!-- Bỏ thẻ <a> bọc ngoài button, đổi thành type="submit" để HTML bắt lỗi required -->
+                <button type="submit">Đăng nhập</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

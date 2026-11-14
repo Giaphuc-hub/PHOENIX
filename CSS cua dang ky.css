@@ -1,0 +1,222 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #0B0F17; /* Nền tối sâu thẳm, cực kỳ sang */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.4); /* Viền vàng kim mỏng tinh tế */
+    width: 420px;
+    height: auto; /* Cho phép container tự co giãn theo chiều cao nội dung */
+    padding: 35px 30px;
+    background-color: #151B26; /* Khung xám than đậm đồng bộ logo */
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+/* Định dạng cho Logo nằm ở đầu khung */
+.container img.logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.container .input input {
+    display: block;
+    margin: 12px auto;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 12px;
+    border: 1px solid #2A3447;
+    background-color: #0F141E;
+    color: #FFFFFF;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.container .input input:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Khối mật khẩu & Icon con mắt */
+.pass-box { 
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    margin-top: -40px;
+}
+
+.pass-box input[type="password"],
+.pass-box input[type="text"] { 
+    margin: 0 !important;
+    width: 100% !important;
+    padding-right: 42px !important;
+}
+
+/* Định dạng icon con mắt màu trắng */
+#togglePassword {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFFFFF; /* Màu trắng */
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#togglePassword:hover {
+    color: #D4AF37;
+}
+
+/* Khối Ngày sinh (.ngaysinh) */
+.ngaysinh {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.ngaysinh label {
+    display: block;
+    color: #A0AEC0;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.ngaysinh input[type="date"] {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 12px;
+    border: 1px solid #2A3447;
+    background-color: #0F141E;
+    color: #FFFFFF;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+}
+
+.ngaysinh input[type="date"]:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Đổi icon lịch sang màu trắng */
+.ngaysinh input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Khối chọn Khóa học (.khoahoc) */
+.khoahoc {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.khoahoc label {
+    display: block;
+    color: #A0AEC0;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.khoahoc select {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 12px;
+    border: 1px solid #2A3447;
+    background-color: #0F141E;
+    color: #FFFFFF;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.khoahoc select:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Link quên mật khẩu */
+.container a {
+    display: block;
+    text-align: right;
+    color: #D4AF37;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 8px 0 20px 0;
+    transition: opacity 0.2s;
+}
+
+.container a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Nút Đăng ký chính */
+.container button {
+    background: linear-gradient(135deg, #E5C158 0%, #D4AF37 100%);
+    color: #0B0F17;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 48px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 12px;
+}
+
+.container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+}
+
+/* Nút Đăng ký phụ (dạng viền outline sang trọng) */
+.container button.btn-register {
+    background: transparent;
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+}
+
+.container button.btn-register:hover {
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: none;
+}
+
+h1 {
+    color: #D4AF37;
+    margin: 5px 0 15px 0;
+}
+
+img.logo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    padding: 100px;
+    margin-left: -80px;
+}
