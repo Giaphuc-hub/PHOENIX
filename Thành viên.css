@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box; /* Tính kích thước bao gồm viền và khoảng đệm */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Xóa khoảng cách mặc định */
+    padding: 20px;
+    background: linear-gradient(115deg, #fff9e9, #ffefc3); /* Nền kem vàng dịu */
+    color: linear-gradient(115deg, #fff9e9, #ffefc3);
+}
+.trang {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto; /* Căn trang ra giữa */
+}
+
+/* Header đen - vàng kim đồng bộ logo */
+.dau-trang {
+    text-align: center;
+    padding: 22px 18px;
+    background: #ffffff;
+    border-radius: 16px;
+    color: #F5C71A;
+    margin-bottom: 24px;
+    border: 1.5px solid rgba(245, 199, 26, 0.65);
+    box-shadow: 0 10px 25px rgba(120, 85, 0, 0.14);
+}
+.logo {
+    width: 70px;
+    height: 70px;
+    line-height: 45px; /* Căn chữ P theo chiều dọc */
+    border-radius: 50%;
+    background-color: linear-gradient(115deg, #fff9e9, #ffefc3);
+    color: #F5C71A;
+    font-size: 25px;
+    font-weight: bold; /* In đậm chữ P */
+    margin: 0 auto 8px; /* Căn logo ra giữa */
+    border: 2px solid #F5C71A;
+    box-shadow: 0 0 14px rgba(245, 199, 26, 0.35);
+}
+.dau-trang h1 {
+    font-size: 27px;
+    margin: 6px 0 4px;
+    color: #F5C71A;
+}
+.dau-trang p {
+    font-size: 13px;
+    letter-spacing: 2px; /* Tạo khoảng cách giữa các chữ */
+    margin: 4px 0 0;
+    color: #D4AF37; /* Trắng bạc theo chữ Educorp */
+}
+
+/* Thẻ Giám đốc nổi bật sang trọng */
+.giamdoc {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto 24px;
+    margin-top: 20px;
+    padding: 24px 22px;
+    text-align: center;
+    background: #ffffff;
+    border: 1.5px solid #F5C71A;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(120, 85, 0, 0.18); /* Tạo bóng nhẹ */
+}
+.giamdoc p {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px;
+    color: #F5C71A;
+}
+.giamdoc img {
+    width: 180px;
+    height: 180px;
+    border: 4px solid #F5C71A;
+    box-shadow: 0 0 18px rgba(245, 199, 26, 0.32);
+}
+.giamdoc h3 {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 14px 0 0;
+    color:  #D4AF37;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Đặt giáo viên trên lễ tân */
+    gap: 22px;
+    width: 100%;
+}
+
+/* Khung khu vực sáng thanh lịch, tách nền rõ */
+.giaovien, .letan {
+    width: 100%;
+    padding: 24px 20px;
+    background-color: rgba(255, 255, 255, 0.72);
+    border: 1.5px solid rgba(212, 175, 55, 0.55);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(249, 174, 0, 0.07);
+}
+.giaovien > p, .letan > p {
+    display: inline-block; /* Nền chỉ bao quanh tiêu đề */
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color:linear-gradient(115deg, #fff9e9, #ffefc3); /* Nền kem vàng dịu */;
+    color: #F5C71A;
+    border: 1px solid rgba(245, 199, 26, 0.6);
+    border-radius: 999px;
+    padding: 9px 24px;
+    margin: 0 0 22px;
+}
+
+.danhsach {
+    display: grid; /* Sử dụng bố cục dạng lưới */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Chia thành 3 cột */
+    gap: 18px;
+    justify-items: center;
+    align-content: start;
+}
+
+/* Thẻ nhân viên sáng mịn, viền vàng kim tinh tế */
+.nhanvien {
+    width: 100%;
+    max-width: 210px; /* Giới hạn chiều rộng mỗi thẻ */
+    padding: 16px 10px;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    text-align: center;
+    border: 1.5px solid rgba(212, 175, 55, 0.65);
+    box-shadow: 0 6px 16px rgba(140, 100, 10, 0.08);
+}
+.giamdoc img, .nhanvien img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; /* Căn giữa nội dung ảnh */
+}
+.nhanvien img {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #D4AF37;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+}
+.nhanvien h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 0;
+    color: #D4AF37;
+    overflow-wrap: anywhere; /* Tránh tên dài làm tràn thẻ */
+}
+
+.letan-list {
+    grid-template-columns: repeat(2, minmax(0, 210px)); /* Chia thành 2 cột */
+    justify-content: center;
+    gap: 200px;
+}
+.letan-list .nhanvien img {
+    width: 115px;
+    height: 115px;
+}
+
+.chan-trang {
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px; /* Tạo khoảng cách giữa các chữ */
+    color: #D4AF37;
+}
+.chan-trang p {
+    color: #D4AF37;
+}
+p {
+    color: #181818;
+}
+img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin: 0 auto 8px;
+    margin-left:-1.5px;
+    margin-top: -1.5px; /* Căn giữa ảnh trong thẻ */
+}

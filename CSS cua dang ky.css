@@ -4,8 +4,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: #0B0F17; /* Nền tối sâu thẳm, cực kỳ sang */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(115deg, #fff9e9, #ffefc3); /* Nền kem vàng dịu */
 }
 
 .container {

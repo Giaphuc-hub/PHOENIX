@@ -1,0 +1,83 @@
+* {                               /* Chọn tất cả các phần tử trên trang */
+    box-sizing: border-box;       /* Tính toán kích thước (width/height) bao gồm cả padding và border */
+    margin: 0;                    /* Xóa bỏ khoảng cách lề (margin) mặc định của mọi thẻ */
+    padding: 0;                   /* Xóa bỏ khoảng cách đệm (padding) mặc định của mọi thẻ */
+}                                 /* Đóng khối thiết lập chung */
+
+body {                            /* Chọn thẻ body (toàn bộ nội dung hiển thị trên trang web) */
+    background-color: #f0f2f5;    /* Đặt màu nền xám nhạt đặc trưng của giao diện Facebook */
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif; /* Thiết lập bộ phông chữ ưu tiên hiển thị */
+    padding: 20px;                /* Tạo khoảng trống đệm 20px xung quanh mép trang */
+}                                 /* Đóng khối body */
+
+.container_dad {                  /* Chọn phần tử có class là container_dad (Khung chứa chính của thẻ cá nhân) */
+    margin: 0 auto;               /* Canh giữa khung theo chiều ngang (trên/dưới = 0, trái/phải tự động) */
+    display: flex;                /* Sử dụng mô hình Flexbox để sắp xếp linh hoạt các phần tử con */
+    flex-direction: column;       /* Sắp xếp các phần tử con theo chiều dọc (ảnh bìa trên, thông tin dưới) */
+    align-items: center;          /* Căn chỉnh các phần tử con nằm ở chính giữa theo chiều ngang */
+    background: linear-gradient(115deg, #fff9e9, #ffefc3); /* Tạo hiệu ứng nền chuyển màu mượt mà từ vàng nhạt sang vàng kem */
+    width: 1000px;                /* Cố định chiều rộng lý tưởng của khung là 1000px */
+    height: 1000px;               /* Cố định chiều cao của khung là 1000px */
+    max-width: 100%;              /* Giới hạn chiều rộng tối đa không vượt quá 100% màn hình (giúp co giãn linh hoạt) */
+    padding-bottom: 40px;         /* Tạo khoảng trống đệm phía dưới cùng bên trong khung */
+    border-radius: 20px;          /* Bo tròn các góc của khung với bán kính 20px */
+    border: 2px solid #e5bd55;    /* Tạo đường viền nét liền màu vàng đậm dày 2px bao quanh khung */
+    overflow: hidden;             /* Ẩn phần nội dung bị tràn ra ngoài biên để ôm trọn theo góc bo tròn */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng mờ nhẹ xung quanh khung tạo chiều sâu */
+}                                 /* Đóng khối .container_dad */
+
+/* Ảnh bìa (Cover Photo) */
+.container_dad > img {            /* Chọn thẻ ảnh (img) con trực tiếp nằm ngay bên trong .container_dad */
+    width: 100%;                  /* Tràn đầy 100% chiều ngang của khung cha */
+    height: 350px;                /* Cố định chiều cao tiêu chuẩn cho ảnh bìa là 350px */
+    object-fit: cover;            /* Cắt và điều chỉnh ảnh vừa khít khung mà không làm méo tỉ lệ gốc */
+    border-bottom: 1px solid #e5bd55; /* Tạo một đường viền phân cách mỏng màu vàng ở cạnh dưới ảnh bìa */
+}                                 /* Đóng khối định dạng ảnh bìa */
+
+/* Khối Ảnh đại diện + Tên */
+.logo {                           /* Chọn phần tử có class là logo (Khung chứa Avatar và tên người dùng) */
+    display: flex;                /* Bật mô hình Flexbox cho khối logo */
+    flex-direction: column;       /* Sắp xếp các phần tử con theo chiều dọc từ trên xuống dưới */
+    align-items: center;          /* Căn giữa các phần tử con theo trục ngang */
+    margin-top: -100px;           /* Kéo dịch khối này lên trên 100px để đè lên một nửa ảnh bìa */
+    z-index: 2;                   /* Đưa lớp hiển thị này lên trên cùng để không bị ảnh bìa che khuất */
+}                                 /* Đóng khối .logo */
+
+/* Ảnh đại diện (Avatar) */
+.logo img {                       /* Chọn thẻ ảnh (img) nằm bên trong khối .logo (Avatar) */
+    width: 200px;                 /* Cố định chiều rộng của ảnh đại diện là 200px */
+    height: 200px;                /* Cố định chiều cao của ảnh đại diện là 200px */
+    border-radius: 50%;           /* Bo tròn tuyệt đối để chuyển khung vuông thành hình tròn */
+    object-fit: cover;            /* Giúp ảnh bên trong không bị biến dạng khi hiển thị vào khung tròn */
+    border: 5px solid #fff9e9;    /* Tạo viền dày 5px trùng màu nền để tạo khoảng tách lớp độc đáo với ảnh bìa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Đổ bóng đậm hơn cho avatar giúp tạo hiệu ứng nổi bật hẳn lên */
+    background-color: #fff;       /* Đặt màu nền trắng dự phòng hiển thị trong lúc ảnh đang tải */
+}                                 /* Đóng khối avatar */
+
+/* Tên người dùng */
+.logo h3 {                        /* Chọn thẻ tiêu đề h3 nằm bên trong khối .logo (Tên người dùng) */
+    margin-top: 12px;             /* Tạo khoảng cách 12px phía trên tên để tách rời khỏi viền ảnh đại diện */
+    font-size: 28px;              /* Đặt kích thước chữ lớn (28px) để làm nổi bật tên */
+    font-weight: 700;             /* Định dạng kiểu chữ in đậm (Bold) */
+    color: #1c1e21;               /* Đặt màu chữ tối (xám đen đặc trưng giúp văn bản sắc nét và dễ đọc) */
+}                                 /* Đóng khối tên người dùng */
+
+/* Ô nhập liệu (Input) nằm dưới avatar */
+.logo input {                     /* Chọn thẻ input nằm bên trong khối .logo (nằm dưới avatar theo luồng flex-direction: column) */
+    margin-top: 14px;             /* Tạo khoảng cách 14px phía trên ô input */
+    padding: 10px 16px;           /* Tạo khoảng đệm bên trong để chữ không sát viền */
+    width: 280px;                 /* Đặt chiều rộng ô input là 280px */
+    max-width: 90vw;              /* Giới hạn chiều rộng tối đa trên màn hình nhỏ */
+    font-size: 15px;              /* Đặt cỡ chữ nhập vào là 15px */
+    color: #1c1e21;               /* Đặt màu chữ tối dễ đọc */
+    background-color: #ffffff;    /* Đặt nền trắng nổi bật trên nền vàng kem */
+    border: 1.5px solid #e5bd55;  /* Tạo đường viền đồng bộ với tông vàng của khung */
+    border-radius: 10px;          /* Bo tròn góc ô input */
+    outline: none;                /* Bỏ viền mặc định của trình duyệt khi click vào ô nhập */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng chuyển mượt khi focus */
+}                                 /* Đóng khối input */
+
+.logo input:focus {               /* Định dạng trạng thái khi người dùng đang bấm vào ô input */
+    border-color: #c99a2e;        /* Đậm màu viền hơn khi đang nhập liệu */
+    box-shadow: 0 0 0 3px rgba(229, 189, 85, 0.25); /* Tạo vòng sáng nhẹ quanh ô input */
+}                                 /* Đóng khối input:focus */
