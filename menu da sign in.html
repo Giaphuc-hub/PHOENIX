@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung tâm Giáo dục Phoenix</title>
+    <link rel="stylesheet" href="menu da sign in.css">
+</head>
+<body>
+    <!-- Thanh điều hướng chính -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images.jpg" alt="Phoenix logo">
+            <span class="brand-name">Phoenix</span>
+        </div>
+
+        <nav class="menu">
+            <a>
+                <button>Home</button>
+            </a>
+            <a href="http://127.0.0.1:5500/Web/%C4%90%C4%83ng%20nh%E1%BA%ADp,%C4%91%C4%83ng%20k%C3%BD/About.html">
+                <button>About</button>
+            </a>
+            <a href="http://127.0.0.1:5500/Web/%C4%90%C4%83ng%20nh%E1%BA%ADp,%C4%91%C4%83ng%20k%C3%BD/Th%C3%A0nh%20vi%C3%AAn.html">
+                <button>Staff</button>
+            </a> 
+            <a>
+                <button>Course</button>
+            </a>  
+            <a>
+                <button>Support</button>
+            </a>
+        </nav>
+
+        <div class="user-profile">
+            <img class="avatar-img" src="bloxfruit.webp" alt="Ảnh đại diện">
+            <span class="user-name">Minh</span>
+        </div>
+    </header>
+
+    <!-- Phần nội dung trang chủ -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Chào mừng đến với Trung tâm Giáo Dục Phoenix</h1>
+            <p>Dạy thật - Học thật - Để tạo ra giá trị thật</p>
+            <button class="cta-btn" type="button">Khám phá ngay</button>
+        </div>
+
+        <div class="AnhPhoenix">
+            <img id="heroImage" class="phoenixavartar" src="English.jpg" alt="Hình minh họa trung tâm">
+        </div>
+    </main>
+
+    <script>
+        const images = ["English.jpg", "tinhoc.jpeg","Toán.avif","Van.jpg"];
+        const heroImage = document.getElementById("heroImage");
+        let imageIndex = 0;
+
+        setInterval(function () {
+            heroImage.classList.add("changing");
+
+            setTimeout(function () {
+                imageIndex = (imageIndex + 1) % images.length;
+                heroImage.src = images[imageIndex];
+                heroImage.classList.remove("changing");
+            }, 400);
+        }, 3000);
+    </script>
+</body>
+</html>

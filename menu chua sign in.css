@@ -1,0 +1,199 @@
+
+/* ============================= */
+/* THIẾT LẬP CHUNG CHO TRANG */
+/* ============================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFF8E6;
+    color: #2A3447;
+    font-family: Arial, sans-serif;
+}
+
+/* ============================= */
+/* THANH ĐIỀU HƯỚNG */
+/* ============================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+    padding: 18px 4%;
+    background: linear-gradient(135deg, #F5D77A, #F0D083);
+    box-shadow: 0 5px 25px rgba(89, 69, 28, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ============================= */
+/* LOGO VÀ TÊN */
+/* ============================= */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #FFF8E6;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(89, 69, 28, 0.2);
+}
+
+.brand-name {
+    color: #2A3447;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* MENU VÀ NÚT */
+/* ============================= */
+.menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.menu button {
+    min-width: 180px;
+    min-height: 76px;
+    padding: 18px 34px;
+    border: 2px solid transparent;
+    border-radius: 38px;
+    background: transparent;
+    color: #2A3447;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu button:hover {
+    background: #EBCB68;
+    color: #173F33;
+    box-shadow: 0 6px 15px rgba(89, 69, 28, 0.12);
+    transform: translateY(-3px);
+}
+
+/* ============================= */
+/* THÔNG TIN NGƯỜI DÙNG */
+/* ============================= */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-img {
+    width: 85px;
+    height: 85px;
+    border: 3px solid #D6A83D;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+.user-name {
+    color: #2A3447;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* PHẦN NỘI DUNG CHÍNH */
+/* ============================= */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    min-height: calc(100vh - 120px);
+    margin: 0 auto;
+    padding: 50px 4%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.hero-content h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #2A3447;
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    width: 100%;
+    margin: 0 0 35px;
+    color: #2A3447;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* NÚT KHÁM PHÁ */
+/* ============================= */
+.cta-btn {
+    padding: 20px 45px;
+    border: 3px solid #D4AF37;
+    border-radius: 50px;
+    background: #0F141E;
+    color: #FFF8E6;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}   
+
+.cta-btn:hover {
+    background: #D4AF37;
+    border-color: #245743;
+    color: #173F33;
+    box-shadow: 0 9px 22px rgba(214, 168, 61, 0.3);
+    transform: translateY(-4px);
+}
+
+/* Khối ảnh bên phải */
+.AnhPhoenix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoenixavartar {
+    width: 100%;
+    max-width: 550px; /* Tăng kích thước tối đa của ảnh */
+    height: 550px; /* Tăng chiều cao để cân bằng với bên trái */
+    border: 4px solid #D6A83D;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 12px 28px rgba(89, 69, 28, 0.18);
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.phoenixavartar.changing {
+    opacity: 0;
+    transform: scale(0.97);
+}
